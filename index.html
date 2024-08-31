@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Jeu de la vitesse de frappe.</title>
+    <title>Typing Speed Test</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,8 +14,29 @@
     />
   </head>
   <body>
+	<div class="container">
+		<div class="top-content">
+			<h1>Typing Speed Test ⌨️</h1>
+			<p class="start-info">
+				Press on <span>"Echap"</span> to (re)start the game.
+			</p>
 
- 
+			<div class="score-info">
+				<p class="time">
+					<span>Time :</span>
+					<span>0</span>
+				</p>
+				<p class="score">
+					<span>Score :</span>
+					<span>0</span>
+				</p>
+       		</div>
+    	</div>
+
+		<textarea class="sentence-typed"></textarea>
+
+		<p class="sentence-to-type"></p>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>
