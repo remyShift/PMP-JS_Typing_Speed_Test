@@ -64,7 +64,7 @@ Once the page is open:
 
 ```bash
 typing-speed-test/
-├── assets/        # Images or icons
+├── assets/        # Images
 ├── style.css      # Stylesheets for layout and design
 ├── script.js      # JavaScript for test functionality
 ├── index.html     # Main HTML file
