@@ -1,6 +1,6 @@
 # Typing Speed Test
 
-A simple web application to test typing speed, built using **HTML**, **CSS**, and **JavaScript**. The app measures words per minute (WPM) and accuracy, providing users a fun and interactive way to improve their typing skills.
+A simple web application to test typing speed, built using **HTML**, **CSS**, and **JavaScript**. The app measures words per minute (WPM) and accuracy, providing users a fun and interactive way to improve their typing skills. You visit the site [here](https://remyshift.github.io/PMP-JS_Typing_Speed_Test/).
 
 ## Table of Contents
 
