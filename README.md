@@ -73,7 +73,7 @@ typing-speed-test/
 
 ## Customization
 
-To add custom text for the typing test, modify the JavaScript in `js/script.js`. You can also tweak the styling by editing the `css/style.css` file.
+To add custom text for the typing test, modify the JavaScript in `script.js`. You can also tweak the styling by editing the `style.css` file.
 
 ## Contributors
 
