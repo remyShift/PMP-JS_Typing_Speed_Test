@@ -27,7 +27,7 @@ function init() {
 	startTimer();
 }
 
-const APIEndpoint = "http://api.quotable.io/random";
+const APIEndpoint = "https://api.quotable.io/random";
 const sentenceToWritePlaceholder = document.querySelector(".sentence-to-type");
 let sentenceToWrite = '';
 
