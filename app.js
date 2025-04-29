@@ -32,11 +32,23 @@ const sentenceToWritePlaceholder = document.querySelector(".sentence-to-type");
 let sentenceToWrite = '';
 
 async function getSentenceToWrite() {
-	const response = await fetch(APIEndpoint);
-	const data = await response.json();
-	const sentence = data.content;
-	sentenceToWritePlaceholder.textContent = sentence;
-	return sentence;
+	return fetch(APIEndpoint)
+		.then(response => {
+			if (!response.ok) {
+				throw new Error('Network response was not ok');
+			}
+			return response.json();
+		})
+		.then(data => {
+			const sentence = data.content;
+			sentenceToWritePlaceholder.textContent = sentence;
+			return sentence;
+		})
+		.catch(error => {
+			console.error('Error fetching sentence:', error);
+			sentenceToWritePlaceholder.textContent = "Error loading sentence. Please try again.";
+			return "";
+		});
 }
 
 function startTimer() {
@@ -48,9 +60,6 @@ function startTimer() {
 		timer.textContent = `Time : ${time}`;
 	}, 1000);
 }
-
-
-
 
 sentenceTyped.addEventListener("input", handleInput);
 
@@ -107,3 +116,6 @@ function displayEndGameMessage(wordsPerMinute) {
 	sentenceTyped.value = "";
 	sentenceTyped.value = `Game finished ! Your speed is ${wordsPerMinute} words per minute. Congratulations ! 🎉`;
 }
+
+// Appeler init() au chargement de la page
+document.addEventListener('DOMContentLoaded', init);
